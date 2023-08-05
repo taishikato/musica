@@ -4,6 +4,8 @@ import Link from "next/link";
 import LogoutButton from "../components/LogoutButton";
 import SupabaseLogo from "../components/SupabaseLogo";
 import NextJsLogo from "../components/NextJsLogo";
+import { satoshi } from "@/fonts/font";
+import { GenerateButton } from "./GenerateButton";
 
 export const dynamic = "force-dynamic";
 
@@ -69,7 +71,9 @@ export default async function Index() {
       </nav>
 
       <div className="flex flex-col max-w-4xl px-3 py-16 animate-in gap-14 lg:py-24 text-foreground">
-        <div className="flex flex-col items-center mb-4 lg:mb-12">
+        <div
+          className={`flex flex-col items-center mb-4 lg:mb-12 ${satoshi.className}`}
+        >
           <div className="flex items-center justify-center gap-8">
             <Link href="https://supabase.com/" target="_blank">
               <SupabaseLogo />
@@ -78,13 +82,10 @@ export default async function Index() {
             <NextJsLogo />
           </div>
           <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
-          <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center my-12">
-            The fastest way to start building apps with{" "}
-            <strong>Supabase</strong> and <strong>Next.js</strong>
+          <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center my-12 font-semibold">
+            listen to the sound of your idea
           </p>
-          <div className="px-6 py-3 font-mono text-sm rounded-lg bg-foreground text-background">
-            Get started by editing <strong>app/page.tsx</strong>
-          </div>
+          <GenerateButton />
         </div>
 
         <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
