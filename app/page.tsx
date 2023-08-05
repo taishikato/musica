@@ -2,9 +2,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import LogoutButton from "../components/LogoutButton";
-import SupabaseLogo from "../components/SupabaseLogo";
-import NextJsLogo from "../components/NextJsLogo";
-import { satoshi } from "@/fonts/font";
+import { satoshi, syne } from "@/fonts/font";
 import { GenerateButton } from "./GenerateButton";
 
 export const dynamic = "force-dynamic";
@@ -74,12 +72,10 @@ export default async function Index() {
         <div
           className={`flex flex-col items-center mb-4 lg:mb-12 ${satoshi.className}`}
         >
-          <div className="flex items-center justify-center gap-8">
-            <Link href="https://supabase.com/" target="_blank">
-              <SupabaseLogo />
-            </Link>
-            <span className="h-6 rotate-45 border-l" />
-            <NextJsLogo />
+          <div
+            className={`text-4xl font-bold flex items-center justify-center gap-8 ${syne.className}`}
+          >
+            Musica
           </div>
           <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
           <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center my-12 font-semibold">
