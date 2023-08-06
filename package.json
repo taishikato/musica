@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "genType": "npx supabase gen types typescript --project-id 'usigyqazdjmfoypaplob' --schema public > types/supabase.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
