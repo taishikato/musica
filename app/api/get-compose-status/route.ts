@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import axios from "redaxios";
 
+export const runtime = "edge";
+
 export async function POST(request: Request) {
   const json = await request.json();
 
